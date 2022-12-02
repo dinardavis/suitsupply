@@ -24,7 +24,6 @@ export default function Home() {
       </Head>
 
       <main >
-        <h1>Hello Nextjs</h1>
         <Gallery>
           {products.map((product) => (
             <Product
