@@ -19,8 +19,8 @@ export const CartClose = styled.div`
   padding: 0.1rem;
   z-index: 101;
   font-weight: 500;
-  color: #777;
-  border: 1px solid #777;
+  color: #494949;
+  border: 1px solid #494949;
   border-radius: 0.3rem;
   cursor: pointer;
 `;
@@ -80,7 +80,37 @@ export const EmptyStyle = styled.div`
 `;
 
 export const CartQuantity = styled.div`
+    display: flex;
+    padding: 0.5rem 0;
+    align-items: center;
+    margin: 1rem 0rem;
 
+    button {
+      background: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+
+      font-size: 1.2rem;
+      margin: .2rem;
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      width: 1rem;
+      text-align: center;
+    }
+
+    span {
+      color: var(--secondary);
+    }
+
+    svg {
+      color: #494949
+    }
 `;
 
 
