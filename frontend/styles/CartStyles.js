@@ -12,6 +12,19 @@ export const CartWrapper = styled.div`
   justify-content: flex-end;
 `;
 
+export const CartClose = styled.div`
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.1rem;
+  z-index: 101;
+  font-weight: 500;
+  color: #777;
+  border: 1px solid #777;
+  border-radius: 0.3rem;
+  cursor: pointer;
+`;
+
 export const CartStyle = styled.div`
   width: 40%;
   background: #f1f1f1;
