@@ -48,11 +48,12 @@ export default function Cart() {
             <FaShoppingCart />
           </EmptyStyle>
         )}
-        <Cards variants={cards} initial="hidden" animate="show">
+        <Cards layout variants={cards} initial="hidden" animate="show">
           {cartItems.length >=1 && (
             cartItems.map((item) => {
               return (
                 <Card 
+                  layout
                   variants={card}
                   key={item.slug}
                 >
@@ -77,7 +78,7 @@ export default function Cart() {
           )}   
         </Cards>
         {cartItems.length >= 1 && (
-          <CheckoutButton>
+          <CheckoutButton layout>
             <h3>Subtotal: ${totalPrice}</h3>
             <button>Checkout</button>
           </CheckoutButton>
