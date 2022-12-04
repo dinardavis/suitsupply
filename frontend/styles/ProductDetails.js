@@ -41,7 +41,7 @@ export const Quantity = styled.div`
   }
 
   svg {
-    color: #494949
+    color: #494949;
   }
 `;
 

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+//Animation
+const { motion } = require("framer-motion");
 
-export const CartWrapper = styled.div`
+export const CartWrapper = styled(motion.div)`
   position: fixed;
   top: 0;
   right: 0;
@@ -12,7 +14,7 @@ export const CartWrapper = styled.div`
   justify-content: flex-end;
 `;
 
-export const CartClose = styled.div`
+export const CartClose = styled(motion.div)`
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
@@ -25,15 +27,15 @@ export const CartClose = styled.div`
   cursor: pointer;
 `;
 
-export const CartStyle = styled.div`
-  width: 40%;
+export const CartStyle = styled(motion.div)`
+  width: 35%;
   background: #f1f1f1;
-  padding: 2rem 3rem;
+  padding: 2rem;
   overflow-y: scroll;
   position: relative;
 `;
 
-export const Card = styled.div`
+export const Card = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,7 +55,7 @@ export const Card = styled.div`
   }
 `;
 
-export const CardInfo = styled.div`
+export const CardInfo = styled(motion.div)`
   width: 50%;
   div {
     display: flex;
@@ -61,10 +63,10 @@ export const CardInfo = styled.div`
   }
 `
 
-export const EmptyStyle = styled.div`
+export const EmptyStyle = styled(motion.div)`
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
   transform: translate(-50%, 0%);
   display: flex;
   flex-direction: column;
@@ -77,9 +79,10 @@ export const EmptyStyle = styled.div`
     color: var(--secondary);
     margin-top: 0.5rem;
   }
+
 `;
 
-export const CartQuantity = styled.div`
+export const CartQuantity = styled(motion.div)`
     display: flex;
     padding: 0.5rem 0;
     align-items: center;
@@ -112,5 +115,21 @@ export const CartQuantity = styled.div`
       color: #494949
     }
 `;
+
+export const CheckoutButton = styled(motion.div)`
+  button {
+    background: var(--primary);
+    padding: 0.7rem 2rem;
+    width: 100%;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+`;
+
+export const Cards = styled(motion.div)``;
 
 

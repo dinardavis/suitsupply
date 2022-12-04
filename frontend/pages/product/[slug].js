@@ -5,6 +5,8 @@ import { DetailsStyle, ProductInfo, Quantity, Buy } from '../../styles/ProductDe
 import { AiFillPlusCircle, AiFillMinusCircle} from 'react-icons/ai'
 import { useStateContext } from '../../lib/context';
 
+
+
 export default function ProductDetails() {
     //useState
     const { qty, increaseQty, decreaseQty, onAdd } = useStateContext();
