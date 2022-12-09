@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const NavStyles = styled.nav`
   min-height: 15vh;
@@ -11,7 +11,7 @@ export const NavStyles = styled.nav`
   }
 `;
 
-export const NavItem = styled.div`
+export const NavItems = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;

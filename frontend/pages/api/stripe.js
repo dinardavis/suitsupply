@@ -1,25 +1,33 @@
-import Stripe from 'stripe';
+import Stripe from "stripe";
 const stripe = new Stripe(`${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`);
+import { getSession } from "@auth0/nextjs-auth0";
 
 export default async function handler(req, res) {
-  if(req.method === "POST") {
-    try {
-      //Create checkout session
-      const session = await stripe.checkout.sessions.create({
-          submit_type: 'pay',
-          mode: 'payment', 
-          payment_method_types: ['card'],
+  const session = getSession(req, res);
+  const user = session?.user;
+  console.log(user);
+  if (user) {
+    const stripeId = user["http://localhost:3000/stripe_customer_id"];
+    if (req.method === "POST") {
+      try {
+        // Create Checkout Sessions from body params.
+        const session = await stripe.checkout.sessions.create({
+          submit_type: "pay",
+          mode: "payment",
+          payment_method_types: ["card"],
+          customer: stripeId,
           shipping_address_collection: {
-            allowed_countries: ['AR', 'AU', 'AT', 'BE', 'BO', 'BR', 'BG', 'CA', 'CL', 'CO', 'CR', 'HR', 'CY', 'CZ', 'DK', 'DO', 'EG', 'EE', 'FI', 'FR', 'DE', 'GR', 'HK', 'HU', 'IS', 'IN', 'ID', 'IE', 'IL', 'IT', 'JP', 'LV', 'LI', 'LT', 'LU', 'MT', 'MX', 'NL', 'NZ', 'NO', 'PY', 'PE', 'PL', 'PT', 'RO', 'SG', 'SK', 'SI', 'ES', 'SE', 'CH', 'TH', 'TT', 'AE', 'GB', 'US', 'UY']
-          }, 
+            allowed_countries: ["US", "CA"],
+          },
+
           allow_promotion_codes: true,
           shipping_options: [
-            { shipping_rate: "shr_1MBaHML6Cc4MjcBZzbIkTSxL" }
+            { shipping_rate: "shr_1MBaHML6Cc4MjcBZzbIkTSxL" },
           ],
-          line_items: req.body.map(item => {
+          line_items: req.body.map((item) => {
             return {
               price_data: {
-                currency: 'usd',
+                currency: "usd",
                 product_data: {
                   name: item.title,
                   images: [item.image.data.attributes.formats.thumbnail.url],
@@ -33,13 +41,62 @@ export default async function handler(req, res) {
               quantity: item.quantity,
             };
           }),
-          //Direct to success or failed page
           success_url: `${req.headers.origin}/success?&session_id={CHECKOUT_SESSION_ID}`,
-          cancel_url: `${req.headers.origin}/cancel`
+          cancel_url: `${req.headers.origin}/canceled`,
         });
-      res.status(200).json(session);
-    } catch(error) {
-      res.status(error.statusCode || 500).json(error.message);
+        res.status(200).json(session);
+      } catch (err) {
+        res.status(err.statusCode || 500).json(err.message);
+      }
+    } else {
+      res.setHeader("Allow", "POST");
+      res.status(405).end("Method Not Allowed");
+    }
+  } else {
+    console.log("nope");
+    if (req.method === "POST") {
+      try {
+        // Create Checkout Sessions from body params.
+        const session = await stripe.checkout.sessions.create({
+          submit_type: "pay",
+          mode: "payment",
+          payment_method_types: ["card"],
+          shipping_address_collection: {
+            allowed_countries: ["US", "CA"],
+          },
+
+          allow_promotion_codes: true,
+          shipping_options: [
+            { shipping_rate: "shr_1L7HGSJvB7fsxaM1DbSs7DeV" },
+            { shipping_rate: "shr_1L7HGyJvB7fsxaM1OpMXx2Fn" },
+          ],
+          line_items: req.body.map((item) => {
+            return {
+              price_data: {
+                currency: "usd",
+                product_data: {
+                  name: item.title,
+                  images: [item.image.data.attributes.formats.thumbnail.url],
+                },
+                unit_amount: item.price * 100,
+              },
+              adjustable_quantity: {
+                enabled: true,
+                minimum: 1,
+              },
+              quantity: item.quantity,
+            };
+          }),
+          success_url: `${req.headers.origin}/success?&session_id={CHECKOUT_SESSION_ID}`,
+          cancel_url: `${req.headers.origin}/canceled`,
+        });
+        res.status(200).json(session);
+      } catch (err) {
+        res.status(err.statusCode || 500).json(err.message);
+      }
+    } else {
+      res.setHeader("Allow", "POST");
+      res.status(405).end("Method Not Allowed");
     }
   }
 }

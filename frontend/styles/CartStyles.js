@@ -1,30 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 //Animation
 const { motion } = require("framer-motion");
 
 export const CartWrapper = styled(motion.div)`
   position: fixed;
-  top: 0;
   right: 0;
+  top: 0;
   height: 100vh;
   width: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 100;
   display: flex;
   justify-content: flex-end;
-`;
-
-export const CartClose = styled(motion.div)`
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  padding: 0.1rem;
-  z-index: 101;
-  font-weight: 500;
-  color: #494949;
-  border: 1px solid #494949;
-  border-radius: 0.3rem;
-  cursor: pointer;
 `;
 
 export const CartStyle = styled(motion.div)`
@@ -61,7 +48,7 @@ export const CardInfo = styled(motion.div)`
     display: flex;
     flex-direction: space-between;
   }
-`
+`;
 
 export const EmptyStyle = styled(motion.div)`
   position: absolute;
@@ -79,44 +66,9 @@ export const EmptyStyle = styled(motion.div)`
     color: var(--secondary);
     margin-top: 0.5rem;
   }
-
 `;
 
-export const CartQuantity = styled(motion.div)`
-    display: flex;
-    padding: 0.5rem 0;
-    align-items: center;
-    margin: 1rem 0rem;
-
-    button {
-      background: transparent;
-      border: none;
-      display: flex;
-      justify-content: center;
-
-      font-size: 1.2rem;
-      margin: .2rem;
-    }
-
-    h3 {
-      margin: 0;
-    }
-
-    p {
-      width: 1rem;
-      text-align: center;
-    }
-
-    span {
-      color: var(--secondary);
-    }
-
-    svg {
-      color: #494949
-    }
-`;
-
-export const CheckoutButton = styled(motion.div)`
+export const Checkout = styled(motion.div)`
   button {
     background: var(--primary);
     padding: 0.7rem 2rem;
@@ -129,7 +81,3 @@ export const CheckoutButton = styled(motion.div)`
     cursor: pointer;
   }
 `;
-
-export const Cards = styled(motion.div)``;
-
-
