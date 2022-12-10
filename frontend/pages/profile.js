@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+
 // Specify Stripe secret api key here
 const stripe = require("stripe")(
   `${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`
@@ -27,6 +28,7 @@ export default function Profile({ user, orders }) {
       <div>
         <h2>{user.name}</h2>
         <p>{user.email}</p>
+        <Logout onClick={() => route.push("/api/auth/logout")}>Log out</Logout>
         <div>
           {orders.map((order) => (
             <Order key={order.id}>
@@ -40,11 +42,16 @@ export default function Profile({ user, orders }) {
             </Order>
           ))}
         </div>
-        <button onClick={() => route.push("/api/auth/logout")}>Log out</button>
       </div>
     )
   );
 }
+
+const Logout = styled.button`
+  padding: .2rem .6rem;
+  margin-top: 2rem;
+  cursor: pointer;
+`;
 
 const Order = styled.div`
   background: white;
