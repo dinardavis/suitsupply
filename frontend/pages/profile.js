@@ -48,8 +48,12 @@ export default function Profile({ user, orders }) {
 }
 
 const Logout = styled.button`
-  padding: .2rem .6rem;
-  margin-top: 2rem;
+  padding: .5rem 1rem;
+  margin-top: 1rem;
+  background-color: #424242;
+  color: #fff;
+  border: none;
+  border-radius: .5rem;
   cursor: pointer;
 `;
 
