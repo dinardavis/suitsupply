@@ -30,6 +30,7 @@ export default function Profile({ user, orders }) {
         <p>{user.email}</p>
         <Logout onClick={() => route.push("/api/auth/logout")}>Log out</Logout>
         <div>
+        <h2>Order History</h2>
           {orders.map((order) => (
             <Order key={order.id}>
               <div>
@@ -49,7 +50,7 @@ export default function Profile({ user, orders }) {
 
 const Logout = styled.button`
   padding: .5rem 1rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
   background-color: #424242;
   color: #fff;
   border: none;
@@ -59,7 +60,7 @@ const Logout = styled.button`
 
 const Order = styled.div`
   background: white;
-  margin: 2rem 0rem;
+  margin-bottom: 2rem;
   padding: 3rem;
   display: flex;
   justify-content: space-between;
