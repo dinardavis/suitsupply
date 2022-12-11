@@ -38,10 +38,19 @@ export default function ProductDetails() {
 
   //Create Toast
   const notify = () => {
-    toast.success(`${title} added to your cart.`, {
-      duration: 1500,
+    toast.success(`${title} added to cart`, {
+      style: {
+        border: '1px solid #424242',
+        padding: '5px',
+        fontSize: '0.8rem',
+        color: '#424242',
+      },
+      iconTheme: {
+        primary: '#6c8ead',
+        secondary: '#fff',
+      },
     });
-  };
+  }
 
   return (
     <DetailsStyle>
