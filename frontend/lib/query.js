@@ -6,7 +6,7 @@ export const PRODUCT_QUERY = `query{
           title
           slug
           price
-                 image{
+          image{
             data{
               attributes{
               formats

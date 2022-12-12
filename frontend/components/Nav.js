@@ -1,16 +1,19 @@
 import Link from "next/link";
 import { FiShoppingBag } from "react-icons/fi";
 import { NavStyles, NavItems } from "../styles/NavStyles";
+import Menu from "./Menu";
 import Cart from "./Cart";
 import { useStateContext } from "../lib/context";
 const { AnimatePresence, motion } = require("framer-motion");
 import User from "./User";
 
 export default function Nav() {
-  const { showCart, setShowCart, totalQuantities } = useStateContext();
+  const { showMenu, setShowMenu, showCart, setShowCart, totalQuantities } = useStateContext();
 
   return (
     <NavStyles>
+      <div onClick={() => setShowMenu(true)}>X</div>
+      <AnimatePresence>{showMenu && <Menu />}</AnimatePresence>
       <Link href="/">SuitSupply</Link>
       <NavItems>
         <User />

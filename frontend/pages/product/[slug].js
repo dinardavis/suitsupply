@@ -54,7 +54,7 @@ export default function ProductDetails() {
 
   return (
     <DetailsStyle>
-      <img src={image.data.attributes.formats.medium.url} alt={title} />
+      <img src={image.data.attributes.formats.large.url} alt={title} />
       <ProductInfo>
         <h2>{title}</h2>
         <p>{description}</p>

@@ -3,7 +3,8 @@ import React, { createContext, useContext, useState } from "react";
 const Context = createContext();
 
 export const StateContext = ({ children }) => {
-  //Ourt application state
+  //Application state
+  const [showMenu, setShowMenu] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [qty, setQty] = useState(1);
@@ -71,6 +72,8 @@ export const StateContext = ({ children }) => {
   return (
     <Context.Provider
       value={{
+        showMenu,
+        setShowMenu,
         showCart,
         setShowCart,
         qty,
