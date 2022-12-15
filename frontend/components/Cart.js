@@ -1,7 +1,7 @@
-import { CartStyle, Card, EmptyStyle, CartWrapper, CardInfo, Checkout } from "../styles/CartStyles";
-import { Quantity } from "../styles/ProductDetails";
+import { CartStyle, Card, EmptyStyle, CartWrapper, CardInfo, Checkout, CartQuantity, CartClose } from "../styles/CartStyles";
 import { FaShoppingCart } from "react-icons/fa";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import { GrClose } from "react-icons/gr";
 //Import State
 import { useStateContext } from "../lib/context";
 import getStripe from "../lib/getStripe";
@@ -39,6 +39,7 @@ export default function Cart() {
         transition={{ type: "tween" }}
         onClick={(e) => e.stopPropagation()}
       >
+        <CartClose onClick={() => setShowCart(false)}><GrClose /></CartClose>
         {cartItems.length < 1 && (
           <EmptyStyle
             initial={{ opacity: 0, scale: 0.8 }}
@@ -61,17 +62,17 @@ export default function Cart() {
                 <img src={item.image.data.attributes.formats.small.url} />
                 <CardInfo>
                   <h3>{item.title}</h3>
-                  <h3>{item.price}$</h3>
-                  <Quantity>
+                  <p>{item.price}$</p>
+                  <CartQuantity>
                     <span>Qty: </span>
-                    <p>{item.quantity}</p>
                     <button onClick={() => onRemove(item)}>
                       <AiFillMinusCircle />
                     </button> 
+                    <p>{item.quantity}</p>
                     <button onClick={() => onAdd(item, 1)}>
                       <AiFillPlusCircle />
                     </button>
-                  </Quantity>
+                  </CartQuantity>
                 </CardInfo>
               </Card>
             );
@@ -79,7 +80,7 @@ export default function Cart() {
         <Checkout layout>
           {cartItems.length >= 1 && (
             <div>
-              <h3>Subtotal ${totalPrice}</h3>
+              <h4>Subtotal ${totalPrice}</h4>
               <button onClick={handleCheckout}>Checkout</button>
             </div>
           )}

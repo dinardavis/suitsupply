@@ -1,21 +1,26 @@
 import styled from "styled-components";
 
 export const NavStyles = styled.nav`
-  min-height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 6rem;
+  width: 100vw;
+  padding: 0 3rem;
   font-size: 1rem;
   a {
-    font-size: 1.2rem;
+    position: absolute;
+    right: calc(50% - 158px/2);
+    font-size: 1.7rem;
+    font-weight: 500;
   }
 `;
 
 export const NavItems = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
   cursor: pointer;
+
   div {
     margin-left: 3rem;
     position: relative;
@@ -24,11 +29,11 @@ export const NavItems = styled.div`
     align-items: center;
   }
   h3 {
-    font-size: 1rem;
-    padding: 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 400;
   }
   svg {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   span {
     position: absolute;
@@ -44,5 +49,14 @@ export const NavItems = styled.div`
     color: #fff;
     border-radius: 50%;
     pointer-event: none;
+  }
+`;
+
+export const Burger = styled.div`
+  div {
+    padding: 1px 15px;
+    background-color: #424242;
+    margin-bottom: 7px;
+    border-radius: .5rem;
   }
 `;

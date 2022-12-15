@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FiShoppingBag } from "react-icons/fi";
-import { NavStyles, NavItems } from "../styles/NavStyles";
+import { NavStyles, NavItems, Burger } from "../styles/NavStyles";
 import Menu from "./Menu";
 import Cart from "./Cart";
 import { useStateContext } from "../lib/context";
@@ -12,9 +12,13 @@ export default function Nav() {
 
   return (
     <NavStyles>
-      <div onClick={() => setShowMenu(true)}>X</div>
       <AnimatePresence>{showMenu && <Menu />}</AnimatePresence>
-      <Link href="/">SuitSupply</Link>
+      <Burger onClick={() => setShowMenu(true)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </Burger>
+      <Link href="/">SUITSUPPLY</Link>
       <NavItems>
         <User />
         <div onClick={() => setShowCart(true)}>

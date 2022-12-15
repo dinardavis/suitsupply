@@ -15,12 +15,49 @@ export const CartWrapper = styled(motion.div)`
 `;
 
 export const CartStyle = styled(motion.div)`
-  width: 35%;
+  width: 22rem;
   background: #f1f1f1;
   padding: 2rem;
   overflow-y: scroll;
   position: relative;
 `;
+
+export const CartQuantity = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 1rem 0rem;
+
+  button {
+    background: transparent;
+    border: none;
+    display: flex;
+    font-size: 1.5rem;
+  }
+
+  p {
+    width: 1rem;
+    text-align: center;
+    margin: 0 0.3rem;
+  }
+
+  span {
+    color: var(--secondary);
+    margin-right: 0.5rem;
+  }
+
+  svg {
+    color: #494949;
+  }
+`;
+
+export const CartClose = styled.div`
+    position: absolute;
+    left: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 400;
+    z-index: 1000;
+`
 
 export const Card = styled(motion.div)`
   display: flex;
@@ -37,8 +74,10 @@ export const Card = styled(motion.div)`
     margin-right: 2rem;
   }
   h3 {
-    font-size: .9rem;
     margin-bottom: .4rem;
+  }
+  p {
+    font-weight: 300;
   }
 `;
 

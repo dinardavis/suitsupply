@@ -1,5 +1,6 @@
 import { useStateContext } from "../lib/context";
 import { MenuWrapper, MenuStyles } from "../styles/MenuStyles";
+import { GrClose } from "react-icons/gr";
 
 
 export default function Menu() {
@@ -20,6 +21,7 @@ export default function Menu() {
         transition={{ type: "tween" }}
         onClick={(e) => e.stopPropagation()}
       >
+        <div onClick={() => setShowMenu(false)}><GrClose /></div>
         <li>New Arrivals</li>
         <li>Suits</li>
         <li>Shoes</li>

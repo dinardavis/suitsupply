@@ -15,9 +15,28 @@ export const MenuWrapper = styled(motion.div)`
 `;
 
 export const MenuStyles = styled(motion.div)`
-  width: 35%;
+  width: 22rem;
   background: #f1f1f1;
-  padding: 2rem;
+  padding: 2rem 3rem;
+  font-size: 1.4rem;
+  font-weight: 200;
+  list-style: none;
   overflow-y: scroll;
   position: relative;
+
+  div {
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+    font-weight: 400;
+  }
+  
+  li {
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+  }
+
+  li:hover {
+    color: #000;
+  }
 `;

@@ -10,6 +10,9 @@ export const ProductStyles = styled.div`
     cursor: pointer;
   }
   h2 {
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 9rem;
+  }
+  h3 {
+    padding: 0 9rem;
   }
 `;

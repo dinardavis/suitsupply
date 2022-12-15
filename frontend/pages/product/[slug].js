@@ -2,9 +2,11 @@ import {
   DetailsStyle,
   ProductInfo,
   Quantity,
-  Buy,
+  AddToCart,
+  BackBtn,
 } from "../../styles/ProductDetails";
-import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import Link from "next/link";
+import { AiFillPlusCircle, AiFillMinusCircle, AiOutlineArrowLeft } from "react-icons/ai";
 import { GET_PRODUCT_QUERY } from "../../lib/query";
 import { useQuery } from "urql";
 import { useRouter } from "next/router";
@@ -34,11 +36,12 @@ export default function ProductDetails() {
   if (fetching) return <p>Loading...</p>;
   if (error) return <p>Oh no... {error.message}</p>;
   //Extract Data
-  const { title, description, image } = data.products.data[0].attributes;
+  const { title, description, image, price } = data.products.data[0].attributes;
 
   //Create Toast
   const notify = () => {
     toast.success(`${title} added to cart`, {
+      position: 'center',
       style: {
         border: '1px solid #424242',
         padding: '5px',
@@ -54,12 +57,14 @@ export default function ProductDetails() {
 
   return (
     <DetailsStyle>
+      <Link href="/"><BackBtn><AiOutlineArrowLeft />Back</BackBtn></Link>
       <img src={image.data.attributes.formats.large.url} alt={title} />
       <ProductInfo>
         <h2>{title}</h2>
         <p>{description}</p>
+        <h4>${price}</h4>
         <Quantity>
-          <span>Quantity</span>
+          <span>Qty:</span>
           <button onClick={decreaseQty}>
             <AiFillMinusCircle />
           </button>
@@ -67,15 +72,16 @@ export default function ProductDetails() {
           <button>
             <AiFillPlusCircle onClick={increaseQty} />
           </button>
+       
         </Quantity>
-        <Buy
+        <AddToCart
           onClick={() => {
             onAdd(data.products.data[0].attributes, qty);
             notify();
           }}
         >
           Add To Cart
-        </Buy>
+        </AddToCart>
       </ProductInfo>
     </DetailsStyle>
   );
