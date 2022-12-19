@@ -3,15 +3,18 @@ import styled from "styled-components";
 export const DetailsStyle = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  width: 100%;
+  margin-top: 6.5rem;
   img {
-    width: 40%;
-    margin-right: 2rem;
+    width: 41%;
+    margin-right: 6rem;
   }
 `;
 
 export const BackBtn = styled.div`
-  align-self: flex-start;
+  position: absolute;
+  top: 7rem;
+  left: 7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +25,7 @@ export const BackBtn = styled.div`
 `;
 
 export const ProductInfo = styled.div`
-  width: 30%;
+  width: 50%;
   margin: 10rem 0 0 2rem;
   p {
     margin-bottom: .5rem;
@@ -46,17 +49,14 @@ export const Quantity = styled.div`
     display: flex;
     font-size: 1.5rem;
   }
-
   p {
     width: 1rem;
     text-align: center;
     margin: 0;
   }
-
   span {
     color: var(--secondary);
   }
-
   svg {
     color: #494949;
   }

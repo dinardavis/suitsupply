@@ -17,12 +17,13 @@ export const MenuWrapper = styled(motion.div)`
 export const MenuStyles = styled(motion.div)`
   width: 22rem;
   background: #f1f1f1;
-  padding: 2rem 3rem;
+  padding: 1.2rem 3rem;
   font-size: 1.4rem;
   font-weight: 200;
   list-style: none;
   overflow-y: scroll;
   position: relative;
+
 
   div {
     position: absolute;

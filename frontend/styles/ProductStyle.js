@@ -8,11 +8,14 @@ export const ProductStyles = styled.div`
   img {
     width: 100%;
     cursor: pointer;
+    border: .5px solid #ccc
   }
   h2 {
-    padding: 0.5rem 9rem;
+    font-size: .9rem;
+    margin-bottom: .2rem;
   }
   h3 {
-    padding: 0 9rem;
+    font-size: .9rem;
+    font-weight: 300;
   }
 `;
