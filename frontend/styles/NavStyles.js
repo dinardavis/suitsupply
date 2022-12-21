@@ -15,8 +15,7 @@ export const NavStyles = styled.nav`
   z-index: 1;
 
   a {
-    position: absolute;
-    right: calc(50% - 121px/2);
+
     font-size: 1.3rem;
     font-weight: 500;
   }
@@ -43,8 +42,8 @@ export const NavItems = styled.div`
   }
   span {
     position: absolute;
-    top: -20%;
-    right: -5%;
+    top: -45%;
+    right: -35%;
     display: flex;
     align-items: center;
     justify-content: center;

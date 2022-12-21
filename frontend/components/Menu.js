@@ -2,7 +2,6 @@ import { useStateContext } from "../lib/context";
 import { MenuWrapper, MenuStyles } from "../styles/MenuStyles";
 import { GrClose } from "react-icons/gr";
 
-
 export default function Menu() {
   const { setShowMenu } = useStateContext();
 
