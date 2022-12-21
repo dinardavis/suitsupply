@@ -12,10 +12,13 @@ export const ProductStyles = styled.div`
   }
   h2 {
     font-size: .9rem;
-    margin-bottom: .2rem;
   }
   h3 {
     font-size: .9rem;
     font-weight: 300;
+  }
+  p {
+    font-size: .8rem;
+    margin: .1rem;
   }
 `;

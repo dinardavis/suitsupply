@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Product({ product }) {
   //Extract from props
-  const { title, price, image, slug } = product.attributes;
+  const { title, price, description, image, slug } = product.attributes;
   return (
     <ProductStyles>
       <Link href={`/product/${slug}`}>
@@ -12,6 +12,7 @@ export default function Product({ product }) {
         </div>
       </Link>
       <h2>{title} </h2>
+      <p>{description}</p>
       <h3>${price}</h3>
     </ProductStyles>
   );
