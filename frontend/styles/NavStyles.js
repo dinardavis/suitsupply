@@ -8,16 +8,16 @@ export const NavStyles = styled.nav`
   justify-content: space-between;
   align-items: center;
   min-height: 3rem;
-  width: 100vw;
+  width: 100%;
   padding: 1rem 3rem;
   background-color: #efefef;
-  transition: all 0.5s;
   z-index: 1;
-
   a {
-
     font-size: 1.3rem;
     font-weight: 500;
+  }
+  @media screen and (max-width: 1100px) {
+    padding: 1rem 2rem;
   }
 `;
 
@@ -54,6 +54,11 @@ export const NavItems = styled.div`
     color: #fff;
     border-radius: 50%;
     pointer-event: none;
+  }
+  @media screen and (max-width: 1100px) {
+    div {
+      margin-left: 1rem;
+    }
   }
 `;
 

@@ -32,11 +32,11 @@ export default function Success({ order }) {
         <h2>{order.customer_details.email}</h2>
         <InfoWrapper>
           <Address>
-            <h3>Adress</h3>
+            <h3>Address</h3>
             {Object.entries(order.customer_details.address).map(
               ([key, val]) => (
                 <p key={key}>
-                  {key} : {val}
+                  {key.charAt(0).toUpperCase() + key.slice(1)} : {val}
                 </p>
               )
             )}
@@ -53,7 +53,7 @@ export default function Success({ order }) {
           </OrderInfo>
         </InfoWrapper>
         <button onClick={() => route.push("/")}>Continue Shopping</button>
-        <Image src={store} alt="success" />
+        <Image src={store} id="store-img" alt="success" />
       </Card>
     </Wrapper>
   );
@@ -62,15 +62,25 @@ export default function Success({ order }) {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
+  padding: 5rem 7rem 0;
+  @media screen and (max-width: 700px) {
+    padding: 5rem 2rem;
+  }
 `;
 
 const Card = styled(motion.div)`
   background: #fff;
   border-radius: .5rem;
-  padding: 2rem;
-  margin-right: 3rem;
+  padding: 4rem;
   font-size: .9rem;
+  line-height: .8;
+  @media screen and (max-width: 700px) {
+    padding: 1rem;
+    font-size: .5rem;
+    line-height: 1;
+  }
 
   h1 {
     color: var(--primary);
@@ -91,12 +101,20 @@ const Card = styled(motion.div)`
 const Address = styled.div`
   font-size: 1rem;
   width: 100%;
+  @media screen and (max-width: 700px) {
+    font-size: .8rem;
+    width: 90%;
+    margin-right: 1rem;
+  }
 `;
 const OrderInfo = styled.div`
   font-size: 1rem;
   width: 100%;
   div {
     padding-bottom: 1rem;
+  }
+  @media screen and (max-width: 700px) {
+    font-size: .8rem;
   }
 `;
 const InfoWrapper = styled.div`

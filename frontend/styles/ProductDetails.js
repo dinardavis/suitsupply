@@ -9,12 +9,20 @@ export const DetailsStyle = styled.div`
     width: 41%;
     margin-right: 6rem;
   }
+
+  @media screen and (max-width: 1100px) {
+    flex-direction: column-reverse;
+    img {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
 `;
 
 export const BackBtn = styled.div`
   position: absolute;
   top: 7rem;
-  left: 7rem;
+  left: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,6 +43,12 @@ export const ProductInfo = styled.div`
     font-weight: medium;
     padding: 0.8rem 1rem;
     cursor: pointer;
+  }
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 2rem 4rem;
+    margin-top: 3rem;
   }
 `;
 
@@ -69,4 +83,9 @@ export const AddToCart = styled.button`
   font-weight: 500;
   border: none;
   border-radius: .3rem;
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
 `;
+
+

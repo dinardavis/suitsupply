@@ -58,7 +58,11 @@ const MainImage = styled.div`
     font-size: 9rem;
     color: #efefef;
     text-shadow: rgba(0,0,0, 0.9) 2px 2px 4px;
-
+  }
+  @media screen and (max-width: 700px) {
+    h1 {
+      font-size: 5rem;
+    }
   }
 `
 
