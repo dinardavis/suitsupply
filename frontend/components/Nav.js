@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FiShoppingBag } from "react-icons/fi";
 import { NavStyles, NavItems, Burger } from "../styles/NavStyles";
+import Menu from "./Menu";
 import Cart from "./Cart";
 import { useStateContext } from "../lib/context";
 const { AnimatePresence, motion } = require("framer-motion");
@@ -11,12 +12,12 @@ export default function Nav() {
 
   return (
     <NavStyles>
-      {/* <AnimatePresence>{showMenu && <Menu />}</AnimatePresence>
+      <AnimatePresence>{showMenu && <Menu />}</AnimatePresence>
       <Burger onClick={() => setShowMenu(true)}>
         <div></div>
         <div></div>
         <div></div>
-      </Burger> */}
+      </Burger>
       <Link href="/">SUITSUPPLY</Link>
       <NavItems>
         <User />
