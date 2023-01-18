@@ -36,7 +36,7 @@ export default function ProductDetails() {
   if (fetching) return <p>Loading...</p>;
   if (error) return <p>Oh no... {error.message}</p>;
   //Extract Data
-  const { title, description, image, price } = data.products.data[0].attributes;
+  const { title, description, image, price, category } = data.products.data[0].attributes;
 
   //Create Toast
   const notify = () => {
@@ -57,7 +57,7 @@ export default function ProductDetails() {
 
   return (
     <DetailsStyle>
-      <Link href="/"><BackBtn><AiOutlineArrowLeft />Back</BackBtn></Link>
+      <Link href={`/${category}`}><BackBtn><AiOutlineArrowLeft />Back</BackBtn></Link>
       <img src={image.data.attributes.formats.large.url} alt={title} />
       <ProductInfo>
         <h2>{title}</h2>

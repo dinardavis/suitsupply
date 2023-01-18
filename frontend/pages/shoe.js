@@ -5,8 +5,6 @@ import Product from "../components/Product";
 import { Gallery } from "../styles/Gallery";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import Image from "next/image";
-import tools from "../public/tools.avif";
 import styled from "styled-components";
 
 export default function Home() {
@@ -32,7 +30,7 @@ export default function Home() {
         <Gallery>
           {fetching && <Skeleton />}
           {products
-            .filter(product => product.attributes.category == "tie")
+            .filter(product => product.attributes.category == "shoe")
             .map((product) => (
             <Product key={product.attributes.slug} product={product} />
           ))}

@@ -5,8 +5,6 @@ import Product from "../components/Product";
 import { Gallery } from "../styles/Gallery";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import Image from "next/image";
-import tools from "../public/tools.avif";
 import styled from "styled-components";
 
 export default function Home() {
@@ -18,7 +16,7 @@ export default function Home() {
   if (fetching) return <p>Loading...</p>;
   if (error) return <p>Oh no... {error.message}</p>;
   const products = data.products.data;
-  
+
   return (
     <div>
       <Head>
@@ -27,17 +25,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <MainImage>
-        <Image src={tools}></Image>
-        <h1>A Cut Above</h1>
-      </MainImage>
-
       <GalleryContainer>
-        <h1>Featured Collection</h1>
+        <h1>Suit Collection</h1>
         <Gallery>
           {fetching && <Skeleton />}
           {products
-            .filter(product => product.attributes.category == "/")
+            .filter(product => product.attributes.category == "suit")
             .map((product) => (
             <Product key={product.attributes.slug} product={product} />
           ))}
@@ -69,7 +62,7 @@ const MainImage = styled.div`
 `
 
 const GalleryContainer = styled.div`
-  margin-top: 2rem;
+  margin-top: 4rem;
 
   h1 {
     position: relative;
