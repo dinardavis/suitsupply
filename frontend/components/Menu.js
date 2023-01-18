@@ -1,6 +1,7 @@
 import { useStateContext } from "../lib/context";
 import { MenuWrapper, MenuStyles } from "../styles/MenuStyles";
 import { GrClose } from "react-icons/gr";
+import Link from "next/link";
 
 export default function Menu() {
   const { setShowMenu } = useStateContext();
@@ -21,10 +22,10 @@ export default function Menu() {
         onClick={(e) => e.stopPropagation()}
       >
         <div onClick={() => setShowMenu(false)}><GrClose /></div>
-        <li>New Arrivals</li>
-        <li>Suits</li>
-        <li>Shoes</li>
-        <li>Ties</li>
+        <Link href={"/ties"}>New Arrivals</Link>
+        <Link href={"/ties"}>Suits</Link>
+        <Link href={"/shoes"}>Shoes</Link>
+        <Link href={"/ties"}>Ties</Link>
       </MenuStyles>
     </MenuWrapper>
   );

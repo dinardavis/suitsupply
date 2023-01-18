@@ -1,23 +1,24 @@
-export const PRODUCT_QUERY = `query{
-    products{
-      data{
-        attributes{
-          description
-          title
-          slug
-          price
-          image{
-            data{
-              attributes{
+export const PRODUCT_QUERY = `
+query {
+  products {
+    data {
+      attributes {
+        title
+        description
+        slug
+        price
+        category
+        image{
+          data{
+            attributes {
               formats
-              }
             }
           }
         }
       }
     }
   }
-  `;
+}`;
 
 export const GET_PRODUCT_QUERY = `
 query getProducts($slug:String!){
@@ -28,6 +29,7 @@ query getProducts($slug:String!){
         slug
         description
         price
+        category
         image{
           data{
             attributes{

@@ -13,11 +13,15 @@ export const NavStyles = styled.nav`
   background-color: #efefef;
   z-index: 1;
   a {
+    margin-right: -121px;
     font-size: 1.3rem;
     font-weight: 500;
   }
   @media screen and (max-width: 1100px) {
     padding: 1rem 2rem;
+    a {
+    margin-right: -60.5px;
+  }
   }
 `;
 

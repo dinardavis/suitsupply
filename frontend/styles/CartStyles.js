@@ -53,7 +53,7 @@ export const CartQuantity = styled.div`
 
 export const CartClose = styled.div`
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     left: 2rem;
     cursor: pointer;
     font-size: 1.5rem;

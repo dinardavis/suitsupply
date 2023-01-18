@@ -29,15 +29,21 @@ export const MenuStyles = styled(motion.div)`
     position: absolute;
     right: 2rem;
     cursor: pointer;
-    font-weight: 400;
+  
   }
   
-  li {
+  a {
+    display: block;
+    width: 90%;
+    padding-bottom: 0.2rem;
     margin-bottom: 0.7rem;
+    font-size: .9em;
+    font-weight: 300;
+    border-bottom: 1px solid #000;
     cursor: pointer;
   }
 
-  li:hover {
-    color: #000;
+  a:hover {
+    font-weight: 400;
   }
 `;

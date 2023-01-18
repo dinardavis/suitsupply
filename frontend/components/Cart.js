@@ -62,7 +62,7 @@ export default function Cart() {
                 <img src={item.image.data.attributes.formats.small.url} />
                 <CardInfo>
                   <h3>{item.title}</h3>
-                  <p>{item.price}$</p>
+                  <p>${item.price}</p>
                   <CartQuantity>
                     <span>Qty: </span>
                     <button onClick={() => onRemove(item)}>

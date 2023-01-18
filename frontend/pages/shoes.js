@@ -27,17 +27,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <MainImage>
-        <Image src={tools}></Image>
-        <h1>A Cut Above</h1>
-      </MainImage>
-
       <GalleryContainer>
-        <h1>Featured Collection</h1>
+        <h1>Shoe Collection</h1>
         <Gallery>
           {fetching && <Skeleton />}
           {products
-            .filter(product => product.attributes.category == "suit")
+            .filter(product => product.attributes.category == "tie")
             .map((product) => (
             <Product key={product.attributes.slug} product={product} />
           ))}
@@ -69,7 +64,7 @@ const MainImage = styled.div`
 `
 
 const GalleryContainer = styled.div`
-  margin-top: 2rem;
+  margin-top: 4rem;
 
   h1 {
     position: relative;
