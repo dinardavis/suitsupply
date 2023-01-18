@@ -3,14 +3,11 @@ import styled from "styled-components";
 export const DetailsStyle = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  margin-top: 6.5rem;
-  img {
-    width: 41%;
-    margin-right: 6rem;
-  }
+  height: 100vh;
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 800px) {
     flex-direction: column-reverse;
     img {
       width: 100%;
@@ -21,7 +18,7 @@ export const DetailsStyle = styled.div`
 
 export const BackBtn = styled.div`
   position: absolute;
-  top: 7rem;
+  top: 50%;
   left: 2rem;
   display: flex;
   justify-content: space-between;
@@ -32,9 +29,13 @@ export const BackBtn = styled.div`
   cursor: pointer;
 `;
 
+export const ProductImage = styled.img`
+    width: 50%;
+    margin-right: 2rem;  
+`
+
 export const ProductInfo = styled.div`
-  width: 50%;
-  margin: 10rem 0 0 2rem;
+  width: 40%;
   p {
     margin-bottom: .5rem;
   }
@@ -44,10 +45,19 @@ export const ProductInfo = styled.div`
     padding: 0.8rem 1rem;
     cursor: pointer;
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 800px) {
     width: 100%;
-    margin: 0;
-    padding: 1rem 2rem 4rem;
+    padding: 32rem 2rem 4rem;
+    margin-top: 3rem;
+  }
+  @media screen and (max-width: 550px) {
+    width: 100%;
+    padding: 12rem 2rem 4rem;
+    margin-top: 3rem;
+  }
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    padding: 4rem 2rem 4rem;
     margin-top: 3rem;
   }
 `;

@@ -2,7 +2,7 @@ import Head from "next/head";
 import { PRODUCT_QUERY } from "../lib/query";
 import { useQuery } from "urql";
 import Product from "../components/Product";
-import { Gallery } from "../styles/Gallery";
+import { GalleryContainer, Gallery } from "../styles/Gallery";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import Image from "next/image";
@@ -65,16 +65,5 @@ const MainImage = styled.div`
     h1 {
       font-size: 5rem;
     }
-  }
-`
-
-const GalleryContainer = styled.div`
-  margin-top: 2rem;
-
-  h1 {
-    position: relative;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
   }
 `

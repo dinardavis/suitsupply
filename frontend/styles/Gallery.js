@@ -11,3 +11,14 @@ export const Gallery = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+
+export const GalleryContainer = styled.div`
+  margin-top: 2rem;
+
+  h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+`

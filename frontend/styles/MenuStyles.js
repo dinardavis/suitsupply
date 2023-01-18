@@ -18,7 +18,6 @@ export const MenuStyles = styled(motion.div)`
   width: 22rem;
   background: #f1f1f1;
   padding: 1.2rem 3rem;
-  font-size: 1.4rem;
   font-weight: 200;
   list-style: none;
   overflow-y: scroll;
@@ -37,7 +36,7 @@ export const MenuStyles = styled(motion.div)`
     width: 90%;
     padding-bottom: 0.2rem;
     margin-bottom: 0.7rem;
-    font-size: .9em;
+    font-size: 1rem;
     font-weight: 300;
     border-bottom: 1px solid #000;
     cursor: pointer;

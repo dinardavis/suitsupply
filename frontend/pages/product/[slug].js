@@ -1,5 +1,6 @@
 import {
   DetailsStyle,
+  ProductImage,
   ProductInfo,
   Quantity,
   AddToCart,
@@ -58,7 +59,7 @@ export default function ProductDetails() {
   return (
     <DetailsStyle>
       <Link href={`/${category}`}><BackBtn><AiOutlineArrowLeft />Back</BackBtn></Link>
-      <img src={image.data.attributes.formats.large.url} alt={title} />
+      <ProductImage src={image.data.attributes.formats.large.url} alt={title} />
       <ProductInfo>
         <h2>{title}</h2>
         <p>{description}</p>

@@ -7,7 +7,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import styled from "styled-components";
 
-export default function Home() {
+export default function Suit() {
   //Fetch products from strapi
   const [results] = useQuery({ query: PRODUCT_QUERY });
   const { data, fetching, error } = results;
@@ -40,28 +40,8 @@ export default function Home() {
   );
 }
 
-const MainImage = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-
-  h1 {
-    position: absolute;
-    width: 100%;
-    font-size: 9rem;
-    color: #efefef;
-    text-shadow: rgba(0,0,0, 0.9) 2px 2px 4px;
-  }
-  @media screen and (max-width: 700px) {
-    h1 {
-      font-size: 5rem;
-    }
-  }
-`
-
 const GalleryContainer = styled.div`
+  width: 100vw;
   margin-top: 4rem;
 
   h1 {
