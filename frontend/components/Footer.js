@@ -11,6 +11,9 @@ export default function Footer() {
 }
 
 const FooterContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding: 0.4rem;
   text-align: center;
   font-size: 0.7rem;

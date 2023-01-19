@@ -5,21 +5,21 @@ export const DetailsStyle = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
-
+  min-height: 100vh;
+ 
   @media screen and (max-width: 800px) {
     flex-direction: column-reverse;
+    min-height: 80vh;
+    padding: 8rem 0rem;
     img {
       width: 100%;
+      padding: 1rem 3rem;
       margin-right: 0;
     }
   }
 `;
 
 export const BackBtn = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,15 +27,21 @@ export const BackBtn = styled.div`
   padding: .2rem;
   font-weight: 400;
   cursor: pointer;
+
+  @media screen and (max-width: 800px) {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+  }
 `;
 
 export const ProductImage = styled.img`
-    width: 50%;
-    margin-right: 2rem;  
+    width: 45%;
+    margin-right: 3rem;  
 `
 
 export const ProductInfo = styled.div`
-  width: 40%;
+  width: 30%;
   p {
     margin-bottom: .5rem;
   }
@@ -47,18 +53,7 @@ export const ProductInfo = styled.div`
   }
   @media screen and (max-width: 800px) {
     width: 100%;
-    padding: 32rem 2rem 4rem;
-    margin-top: 3rem;
-  }
-  @media screen and (max-width: 550px) {
-    width: 100%;
-    padding: 12rem 2rem 4rem;
-    margin-top: 3rem;
-  }
-  @media screen and (max-width: 400px) {
-    width: 100%;
-    padding: 4rem 2rem 4rem;
-    margin-top: 3rem;
+    padding: 0 3rem;
   }
 `;
 
@@ -87,7 +82,7 @@ export const Quantity = styled.div`
 `;
 
 export const AddToCart = styled.button`
-  width: 80%;
+  width: 100%;
   background: var(--primary);
   color: #fff;
   font-weight: 500;

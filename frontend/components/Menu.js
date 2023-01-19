@@ -22,10 +22,10 @@ export default function Menu() {
         onClick={(e) => e.stopPropagation()}
       >
         <div onClick={() => setShowMenu(false)}><GrClose /></div>
-        <Link href={"/"}>Home</Link>
-        <Link href={"/suit"}>Suits</Link>
-        <Link href={"/shoe"}>Shoes</Link>
-        <Link href={"/tie"}>Ties</Link>
+        <Link href={"/"}><a onClick={() => setShowMenu(false)}>Home</a></Link>
+        <Link href={"/suit"}><a onClick={() => setShowMenu(false)}>Suits</a></Link>
+        <Link href={"/shoe"}><a onClick={() => setShowMenu(false)}>Shoes</a></Link>
+        <Link href={"/tie"}><a onClick={() => setShowMenu(false)}>Ties</a></Link>
       </MenuStyles>
     </MenuWrapper>
   );

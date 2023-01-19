@@ -2,7 +2,7 @@ import Head from "next/head";
 import { PRODUCT_QUERY } from "../lib/query";
 import { useQuery } from "urql";
 import Product from "../components/Product";
-import { Gallery } from "../styles/Gallery";
+import { ProductGalleryContainer, Gallery } from "../styles/Gallery";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import styled from "styled-components";
@@ -25,7 +25,7 @@ export default function Tie() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <GalleryContainer>
+      <ProductGalleryContainer>
         <h1>Tie Collection</h1>
         <Gallery>
           {fetching && <Skeleton />}
@@ -35,19 +35,7 @@ export default function Tie() {
             <Product key={product.attributes.slug} product={product} />
           ))}
         </Gallery>
-      </GalleryContainer>
+      </ProductGalleryContainer>
     </div>
   );
 }
-
-const GalleryContainer = styled.div`
-  width: 100vw;
-  margin-top: 4rem;
-
-  h1 {
-    position: relative;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-  }
-`

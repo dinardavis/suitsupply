@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
             <Toaster />
             <Nav />
             <Component {...pageProps} /> 
-            <Footer /> 
+            <Footer />
           </MainContainer>
         </Provider>
       </StateContext>
@@ -31,5 +31,9 @@ function MyApp({ Component, pageProps }) {
 export default MyApp;
 
 const MainContainer = styled.div`
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  padding: 5rem 0;
   max-width: 1920px;
 `

@@ -7,12 +7,12 @@
 
 html,
 body {
+  position: relative;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 2400px;
-  width: 100vw;
-  min-height: 100vh;
   padding: 0;
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -21,6 +21,7 @@ body {
   background: #efefef;
   --primary: #2d2d2d;
   --secondary: #535353;
+  overscroll-behavior: none;
 }
 
 h2 {

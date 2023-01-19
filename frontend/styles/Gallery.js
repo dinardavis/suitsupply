@@ -14,6 +14,20 @@ export const Gallery = styled.div`
 
 export const GalleryContainer = styled.div`
   margin-top: 2rem;
+  margin-bottom: 15rem;
+  min-height: 100vh;
+
+  h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+`
+
+export const ProductGalleryContainer = styled.div`
+  margin-top: 2rem;
+  margin-bottom: 15rem;
 
   h1 {
     position: relative;
