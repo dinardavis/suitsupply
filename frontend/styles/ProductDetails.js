@@ -41,7 +41,7 @@ export const ProductImage = styled.img`
 `
 
 export const ProductInfo = styled.div`
-  width: 30%;
+  width: 25%;
   p {
     margin-bottom: .5rem;
   }
@@ -53,7 +53,7 @@ export const ProductInfo = styled.div`
   }
   @media screen and (max-width: 800px) {
     width: 100%;
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
 `;
 
