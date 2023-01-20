@@ -11,7 +11,7 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantitites] = useState(0);
 
-  //Increase product countity
+  //Increase product quantity
   const increaseQty = () => {
     setQty((prevQty) => prevQty + 1);
   };

@@ -10,7 +10,7 @@ export default function Cart() {
   const { cartItems, setShowCart, onAdd, onRemove, totalPrice } =
     useStateContext();
 
-  //Payment
+  //Payment processing
   const handleCheckout = async () => {
     const stripePromise = await getStripe();
     const response = await fetch("/api/stripe", {
