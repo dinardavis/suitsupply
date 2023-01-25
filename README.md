@@ -13,7 +13,7 @@
     <a href="https://github.com/dinardavis/suitsupply"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://dinardavis.github.io/suitsupply/">View Demo</a>
+    <a href="https://suitsupply.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/dinardavis/suitsupply/issues">Report Bug</a>
     ·
