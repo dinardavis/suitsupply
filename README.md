@@ -75,10 +75,10 @@
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-As mentioned, the application is fully functional. Click here to view the [Live Demo](https://suitsupply.vercel.app/). Users are able to create new credentials, or login using an existing Google account. However, the checkout is also able to be processed without logging in. To proceed with the development/test mode checkout please add properly formatted email and shipping information. For payment details you may enter the following: 
+As mentioned, the application is fully functional. Click here to view the [Live Demo](https://suitsupply.vercel.app/). Users are able to create new credentials, or login using an existing Google account. However, a checkout is also able to be processed without logging in. To proceed with the development/test mode checkout please add properly formatted email and shipping information. For payment details you may enter the following: 
 
-Card Number: 4242 4242 4242 4242
-Exp Date: 04/24
+Card Number: 4242 4242 4242 4242 <br />
+Exp Date: 04/24 <br />
 CVC: 424
 
 <!-- CONTACT -->
@@ -91,6 +91,6 @@ CVC: 424
     <img src="https://camo.githubusercontent.com/2cbca4be42d81c6833fd417d74f5322e80861326d03d52289924138947be7b4e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547769747465722d2532333144413146322e7376673f6c6f676f3d54776974746572266c6f676f436f6c6f723d7768697465" alt="Twitter" data-canonical-src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&amp;logoColor=white" style="max-width: 100%;">
   </a>
 
-Project Link: [https://github.com/dinardavis/spacex_clone](https://github.com/dinardavis/travel_app)
+Project Link: [https://github.com/dinardavis/suitsupply](https://github.com/dinardavis/travel_app)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
