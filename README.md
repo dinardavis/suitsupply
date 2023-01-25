@@ -1,26 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-<!-- PROJECT LOGO -->
-
 <br />
 <div align="center" id="top">
   <a href="https://github.com/dinardavis/suitsupply">
-    <img src="frontend/public/suitsupply-logo.svg" alt="Suitsupply Logo" height="80">
+    <img src="frontend/public/suitsupply-logo.svg" alt="Suitsupply Logo" height="40">
   </a>
 
-<h3 align="center">E-Commerce site utilizing headless CMS</h3>
+<h3 align="center">E-Commerce Site Utilizing Headless CMS</h3>
      
    <p align="center">
-    With the love of travel in mind, this project was created to serve as a one stop shop for travel junkies to get and/or stay excited for their next trip. The functionality is very straightforward; enter the name of a city that you've always dreamed of visiting, the dates that you're available to go there, your return airport, and voila! The dashboard will return the price of a roundtrip flight to that destination, and some other useful info to get your imagination flowing about your next adventure!
+    This project is a fully functional e-commerce site utilizing product images from my favorite retailer. :bowtie: The site is built with the React-based framework Next.js. It features multiple product categories contained within a sidebar navigation, individual product pages, a functional shopping cart, as well as checkout for both guests and logged in users with integrated authentication.  
     <br />
     <br />
     <a href="https://github.com/dinardavis/suitsupply"><strong>Explore the docs »</strong></a>
@@ -46,16 +33,7 @@ yarn dev
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#setup">Setup</a></li>
-      </ul>
-    </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#future-iterations">Future Iterations</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -68,7 +46,7 @@ yarn dev
 <br />
 
 <div align="center">
-  <img src="frontend/public/project_thumbnail.png" alt="An Image of the site landing page featuring various men's clothing products" height="500">
+  <img src="frontend/public/suitsupply_demo.webp" alt="Animation showing the basic functionality of the choosing an item, adding it to the shopping cart, and navigating to different pages." height="500">
 </div>
 
 <br />
@@ -94,103 +72,14 @@ yarn dev
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-## Tools
-
-* [git](https://git-scm.com/downloads): A tool for managing source code
-* [Visual Studio Code](https://code.visualstudio.com/): A source code editor
-* API Keys for: 
-    <br />
-    * Openweather API
-    * Unsplash API
-    * Skyscanner API
-
-## Setup
-
-As this application requires several different API keys, if you wish to only view its functionality, it is recommended to visit the [Live Demo](https://dinardavis.github.io/travel_app/), instead of running the application locally. 
-
-However, if you do wish to adapt or make contributions please do the following:
-
-* With git clone the code to your machine, or download a ZIP of all the files directly.
-
-    [Download the ZIP from this location](https://github.com/dinardavis/spacex_clone), or run the following command to clone the files to your machine:
-
-```bash
-git clone https://github.com/dinardavis/travel_app
-```
-* Once you have the files locally, open the _travel_app_ folder in [Visual Studio Code](https://code.visualstudio.com/).
-
-* Sign up and obtain API keys for:
-  <br />
-    * [Openweather API](https://openweathermap.org/api)
-    * [Unsplash API](https://unsplash.com/developers)
-    * [Skyscanner API](https://rapidapi.com/DataCrawler/api/skyscanner50/)
-
-* Add API keys and secret to /.env file using the format:
-
-    REACT_APP_OPENWEATHER_API_KEY=[API KEY HERE] <br />
-    REACT_APP_UNSPLASH_API_KEY=[API KEY HERE] <br />
-    REACT_APP_UNSPLASH_SECRET_KEY=[API SECRET KEY HERE] <br />
-    REACT_APP_FLIGHT_API_KEY=[API KEY HERE]
-
-* In the project root directory run: 
-
-```bash
-npm install
-```
-
-then...
-
-
-```bash
-npm start
-```
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-In this project I have included various error handling for instances of failed API fetch retrievals. Also covered are cases where the user inputs a city that is not included in the working data set. 
+As mentioned, the application is fully functional. Click here to view the [Live Demo](https://suitsupply.vercel.app/). Users are able to create new credentials, or login using an existing Google account. However, the checkout is also able to be processed without logging in. To proceed with the development/test mode checkout please add properly formatted email and shipping information. For payment details you may enter the following: 
 
-<div align="center">
-  <img src="public/imgs/error.png" alt="Image showing an error message when the city is not included in the data set." height="500">
-</div>
-
-
-## Future Iterations
-
-Additionally included in the sidebar, are examples of several widgets that could be added to the project in the future, such as a user login component to personalize and store the search data, travel advisory alerts, and a foreign currency tracker. Currently, the user will be greeted with a "Coming Soon" notification when interacting with any of these planned enhancements. 
-
-<div align="center">
-  <img src="public/imgs/app_demo.webp" alt="Demo of the coming soon notification attached to the sidebar widgets" height="500">
-</div>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-This project has been a great opportunity to develop further familiarity with React and working with data from various APIs. It also provides a ton of flexibility and room to add and improve on this foundation, so if you want to make any contributions please feel free!
-
-If you like the project, a star would be much appreciated! Thanks again!
-
-For any additions please do the following: 
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
-3. Commit your Changes (`git commit -m 'Add some NewFeature'`)
-4. Push to the Branch (`git push origin feature/NewFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
+Card Number: 4242 4242 4242 4242
+Exp Date: 04/24
+CVC: 424
 
 <!-- CONTACT -->
 ## Contact
