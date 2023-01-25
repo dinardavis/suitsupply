@@ -14,7 +14,7 @@ yarn dev
 <br />
 <div align="center" id="top">
   <a href="https://github.com/dinardavis/suitsupply">
-    <img src="public/suitsupply-logo.svg" alt="Suitsupply Logo" height="80">
+    <img src="frontend/public/suitsupply-logo.svg" alt="Suitsupply Logo" height="80">
   </a>
 
 <h3 align="center">E-Commerce site utilizing headless CMS</h3>
